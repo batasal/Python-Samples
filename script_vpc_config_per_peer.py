@@ -142,5 +142,3 @@ time.sleep(5)
 
 print('\n #### Saving configuration... #### \n')
 net_connect.save_config()
-time.sleep(5)
-print('\n #### Terminating script... #### \n')
