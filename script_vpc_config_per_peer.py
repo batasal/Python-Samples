@@ -12,7 +12,7 @@ username = input('\n Enter the username to login to the device: \n\n')
 password = getpass()
 
 
-N9K = { # Defines device variable to initiate SSH connection
+N9K = {
 'ip':   hostname,
 'username': username,
 'password': password ,
@@ -21,7 +21,7 @@ N9K = { # Defines device variable to initiate SSH connection
 print ('\n #### Connecting to the '  + hostname + ' ' + '#### \n' )
 
 try:
-    net_connect = ConnectHandler(**N9K)  # Initiates the SSH connection to the N9K variable
+    net_connect = ConnectHandler(**N9K)
 except NetMikoTimeoutException:
     print ('\n #### Device not reachable #### \n')
     #continue
@@ -144,4 +144,3 @@ print('\n #### Saving configuration... #### \n')
 net_connect.save_config()
 time.sleep(5)
 print('\n #### Terminating script... #### \n')
-time.sleep(3)
