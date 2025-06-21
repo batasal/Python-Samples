@@ -24,13 +24,10 @@ try:
     net_connect = ConnectHandler(**N9K)
 except NetMikoTimeoutException:
     print ('\n #### Device not reachable #### \n')
-    #continue
 except AuthenticationException:
     print ('\n #### Authentication Failure #### \n')
-    #continue
 except SSHException:
     print ('\n #### Check to see if SSH is enabled on device #### \n')
-    #continue
 
 print ('\n #### Connection successful, enabling vPC related features... #### \n')
 
