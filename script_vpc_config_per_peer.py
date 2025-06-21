@@ -32,7 +32,7 @@ except SSHException:
     print ('\n #### Check to see if SSH is enabled on device #### \n')
     #continue
 
-print ('\n #### Connection successfull, enabling vPC related related features... #### \n')
+print ('\n #### Connection successful, enabling vPC related features... #### \n')
 
 vpc_features = ['feature vpc',
                 'feature lacp',
