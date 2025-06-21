@@ -122,9 +122,9 @@ print('\n #### vPC Peer-Link created #### \n')
 time.sleep(5)
 print('\n #### vPC Configuration on this peer is completed successfully... The configuration done so far: #### \n')
 time.sleep(5)
-config_done = ['show run vpc',
-                'show run int port-channel' +' '+ str(vpc_domain_id)]
-output = net_connect.send_config_set(config_done)
+output = net_connect.send_command('show run vpc')
+print(output)
+output = net_connect.send_command(f'show run int port-channel {vpc_domain_id}')
 print(output)
 time.sleep(5)
 
